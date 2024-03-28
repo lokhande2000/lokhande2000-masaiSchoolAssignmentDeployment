@@ -16,7 +16,7 @@ const Home = () => {
       <Header />
       <Navbar />
 
-      <VStack justifyContent='space-between'>
+      <VStack justifyContent='space-between' mb={10}>
       
         <Flex id="home" flexDirection={{ base: "column", lg:"row" }} boxShadow='dark-lg' p='6' rounded='md' bg='white' w='95%' m='auto' mt={5}>
           <Flex w={{base:'100%', lg:'30%'}}  alignItems={{base:'center', lg:'flex-start'}} justifyContent={{base:"center", lg:"flex-start"}}>
