@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Calculator</title>
+
+    <style>
+      * {
+        font-size: 1.5rem;
+        border-radius: 8px;
+        box-sizing: border-box;
+      }
+      body{
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background: #0073d7e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #main {
+        height: 70vh;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        flex-direction: column;
+        margin: auto;
+        background-color: darkblue;
+       
+        
+      }
+      input {
+        text-align: center;
+        border: none;
+        outline: none;
+        transition: all 0.5s;
+      }
+      input:hover {
+        
+        outline: 3px solid rgb(0, 123, 255);
+      }
+
+      .btn > button{
+        transition: all 0.5s;
+        border: none;
+        padding: 0 18px;
+      }
+      .btn > button:hover {
+            background-color: firebrick;
+            color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div class="input">
+        <input id="first" type="text" placeholder="enter 1st Number" />
+        <input id="second" type="text" placeholder="enter 2st Number" />
+      </div>
+      <div class="btn">
+        <button class="add">Add</button>
+        <button class="subtract">Subtract</button>
+        <button class="multiply">Multiply</button>
+        <button class="divide">Divide</button>
+      </div>
+    </div>
+
+    <script>
+      let firstinput = document.getElementById("first");
+      let secondinput = document.getElementById("second");
+
+      let add = document.querySelector(".add");
+      let subtract = document.querySelector(".subtract");
+      let multiply = document.querySelector(".multiply");
+      let divide = document.querySelector(".divide");
+
+      add.addEventListener("click", function () {
+        let firstValue = +firstinput.value;
+        let secondValue = +secondinput.value;
+
+        alert(firstValue + secondValue);
+        firstinput.value = ""
+        secondinput.value = ""
+      });
+
+      subtract.addEventListener("click", function () {
+        let firstValue = +firstinput.value;
+        let secondValue = +secondinput.value;
+
+        alert(firstValue - secondValue);
+
+        firstinput.value = ""
+        secondinput.value = ""
+      });
+
+      multiply.addEventListener("click", function () {
+        let firstValue = +firstinput.value;
+        let secondValue = +secondinput.value;
+
+        alert(firstValue * secondValue);
+
+        firstinput.value = ""
+        secondinput.value = ""
+      });
+
+      divide.addEventListener("click", function () {
+        let firstValue = +firstinput.value;
+        let secondValue = +secondinput.value;
+
+        alert(firstValue / secondValue);
+
+        firstinput.value = ""
+        secondinput.value = ""
+      });
+    </script>
+  </body>
+</html>
